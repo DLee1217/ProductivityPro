@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Productivity Pro</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+        <link rel="stylesheet" href="css/homework.css">
+    </head>
+
+    <body>
+        <section id="header">
+            <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+      
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">calendar</a></li>
+                    <li><a class="active" href="homework.html">homework</a></li>
+                    <li><a href="#">habits</a></li>
+                    <li><a href="#">notes</a></li>
+                    <li><a href="#">to-do</a></li>
+                    <li><a href="#">settings</a></li>
+                </ul>
+            </div>
+          </section>
+
+        <div class="container">
+            <div class="week-navigation">
+                <button id="prevWeekBtn">Prev Week</button>
+                <h2>This Week's Assignments</h2>
+                <button id="nextWeekBtn">Next Week</button>
+            </div>
+        
+            <!-- Homework Form -->
+            <div id="homeworkForm" class="hidden">
+                <h2>Add Homework Assignment</h2>
+                <form id="assignmentForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="class">Class:</label>
+                    <input type="text" id="class" name="class" required>
+        
+                    <label for="dueDate">Due Date:</label>
+                    <input type="date" id="dueDate" name="dueDate" required>
+        
+                    <label for="priority">Priority:</label>
+                    <select id="priority" name="priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+        
+                    <label for="color">Color:</label>
+                    <input type="color" id="color" name="color" value="#ff6347">
+
+                    <button type="submit">Add Assignment</button>
+                    <button type="button" id="cancelBtn">Cancel</button>
+                </form>
+            </div>
+
+            <!-- Add New Homework Button -->
+            <button id="addHomeworkBtn">Add Assignment</button>          
+        
+            <!-- Weekly Grid (With grid container) -->
+            <div id="weekGrid">
+                <div id="sunday" class="grid-item">Sunday</div>
+                <div id="monday" class="grid-item">Monday</div>
+                <div id="tuesday" class="grid-item">Tuesday</div>
+                <div id="wednesday" class="grid-item">Wednesday</div>
+                <div id="thursday" class="grid-item">Thursday</div>
+                <div id="friday" class="grid-item">Friday</div>
+                <div id="saturday" class="grid-item">Saturday</div>
+            </div>
+        </div>        
+
+        <script src="js/homework.js"></script>
+    </body>
+</html>
